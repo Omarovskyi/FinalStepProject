@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python-backend
-        image: omarovskyi/python-backend:v2
+        image: omarovskyi/python-backend:latest
         ports:
         - containerPort: 8080
