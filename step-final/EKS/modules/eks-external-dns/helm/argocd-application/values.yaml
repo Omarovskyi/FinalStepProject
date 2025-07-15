@@ -1,0 +1,10 @@
+nameOverride: ""
+fullnameOverride: ""
+
+ingress:
+  name: my-app-ingress
+  host: app.omarovskiy.devops7.test-danit.com
+
+service:
+  name: python-backend
+  port: 80
