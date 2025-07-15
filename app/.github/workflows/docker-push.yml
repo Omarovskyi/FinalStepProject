@@ -20,8 +20,8 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/python-backend:latestnew .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/python-backend:v2 .
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/python-backend:latestnew
+        docker push ${{ secrets.DOCKER_USERNAME }}/python-backend:v2

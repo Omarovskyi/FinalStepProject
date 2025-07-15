@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python-backend
-        image: 708426825474.dkr.ecr.eu-central-1.amazonaws.com/cicd-gitlab-github
+        image: omarovskyi/python-backend:v2
         ports:
         - containerPort: 8080
