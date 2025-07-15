@@ -1,9 +1,13 @@
 name: Build and Push Docker Image
 
 on:
-  push:
-    branches: [main]
-
+    push:
+      branches: [main]
+      paths:
+        - 'app/**'
+        - 'Dockerfile'
+        - '.github/workflows/docker-push.yml'
+        
 jobs:
   docker:
     runs-on: ubuntu-latest
