@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python-backend
-  namespace: default
+  namespace: backend
   labels:
     app: python-backend
 spec:

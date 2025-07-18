@@ -2,9 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: python-backend-ingress
-  namespace: default
+  namespace: backend
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    external-dns.alpha.kubernetes.io/hostname: app.omarovskiy.devops7.test-danit.com
 spec:
   ingressClassName: nginx
   rules:
