@@ -122,7 +122,7 @@ variable "irsa_tags" {
 }
 
 variable "settings" {
-  type        = map(any)
+  type        = any
   default     = {}
   description = "Additional settings which will be passed to the Helm chart values, see https://hub.helm.sh/charts/bitnami/external-dns"
 }

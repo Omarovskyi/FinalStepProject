@@ -35,14 +35,16 @@ resource "helm_release" "this" {
   lint                       = var.helm_lint
 
   values = [
-    data.utils_deep_merge_yaml.values[0].output
+    local.merged_values
   ]
 
   dynamic "set" {
     for_each = var.settings
     content {
       name  = set.key
-      value = set.value
+      value = (
+        can(tostring(set.value)) ? tostring(set.value) : join(",", set.value)
+      )
     }
   }
 

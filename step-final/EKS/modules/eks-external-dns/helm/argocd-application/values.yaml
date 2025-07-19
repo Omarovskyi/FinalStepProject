@@ -1,10 +1,20 @@
-nameOverride: ""
-fullnameOverride: ""
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Omarovskyi/FinalStepProject.git
+    targetRevision: HEAD
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 
-ingress:
-  name: my-app-ingress
-  host: app.omarovskiy.devops7.test-danit.com
-
-service:
-  name: python-backend
-  port: 80
+ingress-nginx:
+  controller:
+    ingressClassResource:
+      enabled: false 
+    service:
+      type: LoadBalancer

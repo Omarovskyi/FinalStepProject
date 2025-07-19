@@ -22,8 +22,8 @@ data "aws_eks_cluster_auth" "danit" {
 }
 
 resource "aws_eks_addon" "coredns" {
-  cluster_name                = var.name
-  addon_name                  = "coredns"
+  cluster_name = var.name
+  addon_name   = "coredns"
   #addon_version               = "v1.11.1-eksbuild.4"
   #addon_version		      = "v1.11.3-eksbuild.1"
   addon_version               = "v1.12.2-eksbuild.4"

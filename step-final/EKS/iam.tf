@@ -73,7 +73,7 @@ POLICY
 }
 
 resource "aws_iam_policy" "secrets_policy" {
-  name        = "GetSecrets"
+  name        = "GetSecrets2"
   path        = "/"
   description = "Policy to read aws secrets"
 
